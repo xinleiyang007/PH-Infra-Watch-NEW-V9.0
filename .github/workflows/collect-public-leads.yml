@@ -1,0 +1,88 @@
+name: Collect PH project leads and publish Atlas V9
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'v9.html'
+      - 'index.html'
+      - 'v7_1.html'
+      - 'v8*.html'
+      - 'data/projects.json'
+      - 'data/companies.json'
+      - 'config/news_sources.json'
+      - 'scripts/collect_news_v9.py'
+      - '.github/workflows/collect-public-leads.yml'
+  schedule:
+    # UTC 02:17,14:17 ~ Manila 10:17,22:17. Runs may be delayed.
+    - cron: '17 2,14 * * *'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: ph-infra-atlas-deploy
+  cancel-in-progress: false
+jobs:
+  collect-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout latest source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore recent media-lead cache (best effort)
+        uses: actions/cache/restore@v4
+        with:
+          path: data/media_leads.json
+          key: media-leads-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            media-leads-
+      - name: Collect Philippine publisher and official-source RSS
+        run: python scripts/collect_news_v9.py
+      - name: Cache media-lead history without pushing main
+        uses: actions/cache/save@v4
+        with:
+          path: data/media_leads.json
+          key: media-leads-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Prepare static website without publishing crawler source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site/data _site/config
+          find . -maxdepth 1 -type f -name '*.html' -exec cp {} _site/ \;
+          if [ -d data ]; then cp -R data/. _site/data/; fi
+          cp config/news_sources.json _site/config/news_sources.json
+          touch _site/.nojekyll
+          test -s _site/index.html
+          test -s _site/data/projects.json
+          test -s _site/data/companies.json
+          test -s _site/data/media_status.json
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy site (no git push; avoids Desktop conflicts)
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Summarize media coverage and health
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY2'
+          import json,os
+          p='data/media_status.json'
+          if os.path.exists(p):
+              d=json.load(open(p))
+              s=f"V9 media collection: {d.get('successful_sources',0)}/{d.get('configured_sources',0)} sources responded; {d.get('stored_records',0)} relevant leads; no changes to projects.json."
+          else:s='No media status JSON produced.'
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:f.write(s+'\n')
+          PY2

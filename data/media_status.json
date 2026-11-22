@@ -1,0 +1,10 @@
+{
+  "schema_version": "media-status-9.0",
+  "generated_at": null,
+  "successful_sources": 0,
+  "configured_sources": 25,
+  "new_records": 0,
+  "stored_records": 0,
+  "sources": [],
+  "history_notice": "尚未运行 GitHub Actions：当前 0 仅是空数据种子，不代表已经完成采集。V9 使用 Actions Cache 暂存媒体线索，但缓存可能过期或被清除。"
+}

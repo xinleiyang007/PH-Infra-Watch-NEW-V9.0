@@ -1,0 +1,33 @@
+{
+  "version": "9.0",
+  "baseline_generated_at": "2026-11-22",
+  "projects": 266,
+  "company_or_holder_records": 227,
+  "projects_with_location_reference": 254,
+  "projects_with_owner_or_holder": 266,
+  "projects_with_named_investors": 11,
+  "projects_with_named_contractors": 2,
+  "projects_with_named_subcontractors": 0,
+  "project_records_with_source_url": 266,
+  "projects_by_subtype": {
+    "energy_other": 34,
+    "ev_charging": 1,
+    "ict_other": 1,
+    "smart_datacenter": 7,
+    "solar_ground": 101,
+    "solar_rooftop": 31,
+    "storage": 3,
+    "structured_cabling": 1,
+    "wind": 87
+  },
+  "configured_direct_rss": 10,
+  "configured_index_discovery": 15,
+  "live_source_successes": "unknown_before_first_run",
+  "warnings": [
+    "地点多数为城市或省份参考点，并非施工现场坐标。",
+    "政府合同清单日期不等于开工、招标或投产日期。",
+    "未披露投资方/EPC/分包商保持未知，不能推断。",
+    "采集的新闻线索未核验，不自动进入正式项目库。",
+    "部分项目原文链接可能过期、改版或返回404。"
+  ]
+}

@@ -1,0 +1,26 @@
+﻿来源编号,来源名称,信息主体,信息组别,方式,方式说明,原生订阅链接或搜索语句,来源主页,当前状态
+philstar_business,Philstar · Business,Philstar,media,rss,原生RSS,https://www.philstar.com/rss/business,https://www.philstar.com/business,尚需首次线上运行验证
+businessworld,BusinessWorld,BusinessWorld,media,rss,原生RSS,https://www.bworldonline.com/feed/,https://www.bworldonline.com/,尚需首次线上运行验证
+inquirer_business,Inquirer · Business,Inquirer,media,rss,原生RSS,https://business.inquirer.net/feed,https://business.inquirer.net/,尚需首次线上运行验证
+gma_news,GMA News,GMA News,media,rss,原生RSS,https://data.gmanews.tv/gno/rss/news/feed.xml,https://www.gmanetwork.com/news/,尚需首次线上运行验证
+rappler_business,Rappler · Business,Rappler,media,rss,原生RSS,https://www.rappler.com/business/feed/,https://www.rappler.com/business/,尚需首次线上运行验证
+rappler_ph,Rappler · Philippines,Rappler,media,rss,原生RSS,https://www.rappler.com/philippines/feed/,https://www.rappler.com/philippines/,尚需首次线上运行验证
+inquirer_national,Inquirer · Newsinfo,Inquirer,media,rss,原生RSS,https://newsinfo.inquirer.net/feed,https://newsinfo.inquirer.net/,尚需首次线上运行验证
+manilatimes_business,The Manila Times · Business,The Manila Times,media,rss,原生RSS,https://next.manilatimes.net/business/corporate-news/feed/,https://next.manilatimes.net/business,尚需首次线上运行验证
+manilabulletin_index,Manila Bulletin · 索引,Manila Bulletin,media,google_news_search,Google News索引,site:mb.com.ph (solar OR wind OR energy storage OR data center OR fiber optic OR power project) when:45d,https://mb.com.ph/,尚需首次线上运行验证
+businessmirror_index,BusinessMirror · 索引,BusinessMirror,media,google_news_search,Google News索引,site:businessmirror.com.ph (solar OR wind OR energy storage OR data center OR broadband OR power project) when:45d,https://businessmirror.com.ph/,尚需首次线上运行验证
+abs_cbn_index,ABS-CBN News · 索引,ABS-CBN News,media,google_news_search,Google News索引,site:abs-cbn.com (solar OR power plant OR wind farm OR BESS OR data center OR fiber optic) when:45d,https://www.abs-cbn.com/news,尚需首次线上运行验证
+sunstar_index,SunStar · 索引,SunStar,media,google_news_search,Google News索引,site:sunstar.com.ph (solar OR wind OR power plant OR data center OR broadband OR substation) when:45d,https://www.sunstar.com.ph/,尚需首次线上运行验证
+manilastandard_index,Manila Standard · 索引,Manila Standard,media,google_news_search,Google News索引,site:manilastandard.net (solar OR wind OR battery energy OR data center OR fiber optic OR power plant) when:45d,https://manilastandard.net/,尚需首次线上运行验证
+dailytribune_index,Daily Tribune · 索引,Daily Tribune,media,google_news_search,Google News索引,site:tribune.net.ph (solar OR wind OR power plant OR data center OR grid project OR broadband) when:45d,https://tribune.net.ph/,尚需首次线上运行验证
+pna_index,Philippine News Agency · 索引,Philippine News Agency,government_media,google_news_search,Google News索引,site:pna.gov.ph (solar OR power project OR renewable OR data center OR fiber optic OR charging station) when:45d,https://www.pna.gov.ph/news/business,尚需首次线上运行验证
+doe_index,DOE · 项目公告索引,DOE,official,google_news_search,Google News索引,site:doe.gov.ph (solar OR wind OR battery OR renewable OR project award) when:60d,https://doe.gov.ph/,尚需首次线上运行验证
+ppp_index,PPP Center · 项目索引,PPP Center,official,google_news_search,Google News索引,site:ppp.gov.ph (power OR energy OR ICT OR digital OR data center OR broadband) when:60d,https://ppp.gov.ph/,尚需首次线上运行验证
+dict_index,DICT · 数字基础设施索引,DICT,official,google_news_search,Google News索引,site:dict.gov.ph (fiber OR broadband OR data center OR ICT OR connectivity) when:60d,https://dict.gov.ph/,尚需首次线上运行验证
+bcda_index,BCDA · Clark 项目索引,BCDA,official,google_news_search,Google News索引,site:bcda.gov.ph (data center OR smart city OR solar OR power OR ICT infrastructure) when:60d,https://bcda.gov.ph/,尚需首次线上运行验证
+topics_storage,跨媒体 · 储能与充电,Google News 综合发现,topic,google_news_search,Google News索引,Philippines (BESS OR energy storage OR EV charging station) (project OR construction OR contract) when:30d,https://news.google.com/,尚需首次线上运行验证
+topics_ict,跨媒体 · ICT 工程,Google News 综合发现,topic,google_news_search,Google News索引,Philippines (structured cabling OR fiber optic OR ELV OR data center OR ICT infrastructure) (project OR contract OR construction) when:30d,https://news.google.com/,尚需首次线上运行验证
+philstar_headlines,Philstar · Headlines,Philstar,media,rss,原生RSS,https://www.philstar.com/rss/headlines,https://www.philstar.com/headlines,尚需首次线上运行验证
+manilatimes_green,The Manila Times · Green Industries,The Manila Times,media,rss,原生RSS,https://next.manilatimes.net/business/green-industries/feed/,https://next.manilatimes.net/business/green-industries,尚需首次线上运行验证
+powerphilippines_index,Power Philippines · 能源行业索引,Power Philippines,media,google_news_search,Google News索引,site:powerphilippines.com (solar OR wind OR BESS OR power plant OR energy storage OR transmission) when:45d,https://powerphilippines.com/,尚需首次线上运行验证
+dcd_ph_index,Data Center Dynamics · 菲律宾数据中心索引,Data Center Dynamics,media,google_news_search,Google News索引,site:datacenterdynamics.com/en/news/ Philippines (data center OR power OR construction OR ICT) when:60d,https://www.datacenterdynamics.com/en/tags/philippines/,尚需首次线上运行验证
